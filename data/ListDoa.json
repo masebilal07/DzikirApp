@@ -1,0 +1,142 @@
+[
+	{
+		"id":"01",
+		"judul":"Doa Sebelum Makan",
+	},
+	{
+		"id":"02",
+		"judul":"Doa Setelah Makan",
+	},
+	{
+		"id":"03",
+		"judul":"Doa Ketika Makan Lupa Membaca Doa",
+	},
+	{
+		"id":"04",
+		"judul":"Doa Sebelum Tidur",
+	},
+	{
+		"id":"05",
+		"judul":"Doa Ketika Mimpi Buruk",
+	},
+	{
+		"id":"06",
+		"judul":"Doa Ketika Mendapat Mimpi Baik",
+	},
+	{
+		"id":"07",
+		"judul":"Doa Bangun Tidur",
+	},
+	{
+		"id":"08",
+		"judul":"Doa Masuk Kamar Mandi",
+	},
+	{
+		"id":"09",
+		"judul":"Doa Istinja",
+	},
+	{
+		"id":"10",
+		"judul":"Doa Keluar Kamar Mandi",
+	},
+	{
+		"id":"11",
+		"judul":"Doa Menjelang Sholat Shubuh",
+	},
+	{
+		"id":"12",
+		"judul":"Doa Menyambut Pagi hari",
+	},
+	{
+		"id":"13",
+		"judul":"Doa Menyambut Sore Hari",
+	},
+	{
+		"id":"14",
+		"judul":"Doa Ketika Bercermin",
+	},
+	{
+		"id":"15",
+		"judul":"Doa Masuk Rumah",
+	},
+	{
+		"id":"16",
+		"judul":"Doa Keluar Rumah / Doa Bepergian",
+	},
+	{
+		"id":"17",
+		"judul":"Doa Memakai Pakaian",
+	},
+	{
+		"id":"18",
+		"judul":"Doa Memakai Pakaian Baru",
+	},
+	{
+		"id":"19",
+		"judul":"Doa Melepas Pakaian",
+	},
+	{
+		"id":"20",
+		"judul":"Doa Memohon Ilmu Yang Bermanfaat",
+	},
+	{
+		"id":"21",
+		"judul":"Doa Setelah Adzan",
+	},
+	{
+		"id":"22",
+		"judul":"Doa Sebelum Belajar",
+	},
+	{
+		"id":"23",
+		"judul":"Doa Sesudah Belajar",
+	},
+	{
+		"id":"24",
+		"judul":"Doa Berpergian",
+	},
+	{
+		"id":"25",
+		"judul":"Doa Naik Kendaraan",
+	},
+	{
+		"id":"26",
+		"judul":"Doa Naik Kapal",
+	},
+	{
+		"id":"27",
+		"judul":"Doa Ketika Sampai di Tempat Tujuan",
+	},
+	{
+		"id":"28",
+		"judul":"Doa Ketika Menuju Masjid",
+	},
+	{
+		"id":"29",
+		"judul":"Doa Masuk Masjid",
+	},
+	{
+		"id":"30",
+		"judul":"Doa Keluar Masjid",
+	},
+	{
+		"id":"31",
+		"judul":"Doa Akan Membaca Al-Qur'an",
+	},
+	{
+		"id":"32",
+		"judul":"Doa Setelah Membaca Al-Qur'an",
+	},
+	{
+		"id":"33",
+		"judul":"Doa Niat Wudhu",
+	},
+	{
+		"id":"34",
+		"judul":"Doa Setelah Wudhu",
+	},
+	{
+		"id":"35",
+		"judul":"Doa akan Mandi (Bukan Mandi Wajib)",
+	},
+]
