@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {Container, Header, Left, Body, Right, Button, Icon, Title } from 'native-base';
+import {Container, Header, Left, Body, Right, Button, Icon, Title,ScrollView } from 'native-base';
 import Menu, { MenuItem, MenuDivider } from 'react-native-material-menu';
-import { View,TouchableOpacity,Image,StyleSheet, Text, Linking } from 'react-native';
+import { View,TouchableOpacity,Image,StyleSheet, Text, Linking,Dimensions } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import PagiScreen from './component/layout/PagiScreen';
 import SoreScreen from './component/layout/SoreScreen';
@@ -12,6 +12,7 @@ import KubroPagiScreen from './component/layout/KubroPagiScreen';
 import KubroSoreScreen from './component/layout/KubroSoreScreen';
 import DetailDoa from './component/layout/DetailDoa';
 import About from './component/layout/About';
+import Donasi from './component/layout/Donasi';
 
 
 class HomeScreen extends Component {
@@ -19,6 +20,21 @@ class HomeScreen extends Component {
   static navigationOptions = {
     header:null
   };
+
+  constructor(props) {
+    super(props);
+  
+    this.state = {
+      rotate: true,
+    };
+  }
+
+  onLayout(e) {
+    const {width, height} = Dimensions.get('window');
+    this.setState({
+      rotate: (height > width),
+    });
+  }
 
   _menu = null;
  
@@ -33,19 +49,12 @@ class HomeScreen extends Component {
   hideMenu = () => {
     this._menu.hide();
   };
-
-  // _hideTextMenu = () => {
-  //   this.setState({
-      
-  //   })
-  // }
-
 // warna dasar - 162e40
   
   render() {
     return (
-      <View style={{flex: 1,backgroundColor:'#ecf2f5' }}>
-        <Header style={{backgroundColor:'#00dfbe'}}>
+      <View onLayout={this.onLayout.bind(this)} style={{flex: 1,backgroundColor:'#ecf2f5' }}>
+        <Header style={{backgroundColor:'#f47e38'}} androidStatusBarColor='#e25b19'>
           <Left>
             <Button transparent>
             <Menu
@@ -66,7 +75,7 @@ class HomeScreen extends Component {
               >About</MenuItem>
               <MenuItem 
                 onPress={ ()=> 
-                  Linking.openURL('http://pondokinformatika.com') 
+                  Linking.openURL('http://quranhomestay.com/') 
                 }
               >Kunjungi Kami</MenuItem>
             </Menu>
@@ -77,7 +86,7 @@ class HomeScreen extends Component {
             <Title style={styles.textHeader}>Dzikir Pagi & Petang</Title>
           </Body>
         </Header>
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center',backgroundColor:'#ecf2f5' }}>
+         <View style={[{ flex: 1, alignItems: 'center', justifyContent: 'center',backgroundColor:'#ecf2f5' }, (this.state.rotate ? { flexDirection: 'column' } : { flexDirection: 'row' })]}>
         <TouchableOpacity 
           onPress={() => {
             this.props.navigation.navigate('Pagi', {
@@ -140,6 +149,7 @@ const RootStack = createStackNavigator(
     Kubrosore: KubroSoreScreen,
     Detail: DetailDoa,
     About: About,
+    Donasi:Donasi,
   },
   {
     initialRouteName: 'Home',

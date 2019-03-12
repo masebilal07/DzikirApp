@@ -13,7 +13,7 @@ export default class KubroSoreScreen extends React.Component {
         <View style={{flex:1, backgroundColor:'#ecf2f5'}}>
           <ScrollView style={{flex:2, margin:15, marginTop:2}}>
             <View style={{backgroundColor:'#ffffff'}}>
-              <Text style={styles.textJudul}>Dzikir Pagi Lengkap</Text>
+              <Text style={styles.textJudul}>Dzikir Pagi Kubro</Text>
             </View>
             {DzikirPagiKubro.map((kubro, index) =>
               <View key={index} style={{backgroundColor:'#ffffff', marginTop:10, padding:12}}>
@@ -53,7 +53,7 @@ export default class KubroSoreScreen extends React.Component {
         lineHeight:20,
         marginTop: 10,
         fontStyle:'italic',
-        color:'#666666',
+        color:'#f47e38',
         fontFamily: 'SourceSansPro',
         fontSize: 13,
      },

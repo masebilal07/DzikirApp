@@ -6,20 +6,6 @@ import DataDoa from '../../data/DataDoa';
 
 export default class DetailDoa extends React.Component {
     static navigationOptions = {
-      // headerTitle: 'Detail Doa',
-      // headerTitleStyle: {
-      //   fontFamily: 'SourceSansPro',
-      //   fontWeight: 'bold',
-      //   // fontStyle: 'italic',
-      //   fontSize: 20,
-      //   marginHorizontal: 0,
-      //   flex: 1,
-      //   letterSpacing: 2,
-      // },
-      // headerStyle: {
-      //   backgroundColor: '#00dfbe'
-      // },
-      // headerTintColor: '#FFFFFF',
       header:null
     };
     _menu = null;
@@ -52,7 +38,7 @@ render() {
     const index = parseInt(this.id) - 1;  
       return (
         <View style={{flex:1, backgroundColor:'#ecf2f5'}}>
-          <Header style={{backgroundColor:'#00dfbe'}}>
+          <Header style={{backgroundColor:'#f47e38'}} androidStatusBarColor='#e25b19'>
             <Left>
               <TouchableOpacity>
               <Icon onPress={() => navigation.goBack(null)} style={{color:'#fff'}} name='arrow-back'/>
@@ -85,7 +71,6 @@ render() {
                 <Text style={styles.textArab}>{DataDoa[index].arab}</Text>
                 <Text style={styles.textArabLatin}>{DataDoa[index].arablatin}</Text>
                 <Text style={styles.textTerjemah}>{DataDoa[index].terjemah}</Text>
-                 <Text style={styles.sumber}>{DataDoa[index].sumber}</Text>
               </View>
           </ScrollView>
         </View>
@@ -131,7 +116,7 @@ textCopy: {
     lineHeight:20,
     marginTop: 10,
     fontStyle:'italic',
-    color:'#666666',
+    color:'#f47e38',
     fontFamily: 'SourceSansPro',
     fontSize: 15,
  },

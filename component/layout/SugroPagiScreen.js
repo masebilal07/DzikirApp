@@ -14,7 +14,7 @@ export default class SugroPagiScreen extends React.Component {
         <View style={{flex:1, backgroundColor:'#ecf2f5'}}>
           <ScrollView style={{flex:2, margin:15, marginTop:2}}>
             <View style={{backgroundColor:'#ffffff'}}>
-              <Text style={styles.textJudul}>Dzikir Pagi Praktis</Text>
+              <Text style={styles.textJudul}>Dzikir Pagi Sugro</Text>
             </View>
             {DzikirPagiSugro.map((sugro, index) =>
               <View key={index} style={{backgroundColor:'#ffffff', marginTop:10, padding:12}}>
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     lineHeight:20,
     marginTop: 10,
     fontStyle:'italic',
-    color:'#666666',
+    color:'#f47e38',
     fontFamily: 'SourceSansPro',
     fontSize: 13,
  },

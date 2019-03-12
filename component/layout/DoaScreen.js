@@ -1,5 +1,5 @@
 import React from 'react';
-import {Icon, Card, CardItem,Body,Text,Content, List, ListItem, Left, Right, Button} from 'native-base';
+import {Icon, Card, CardItem,Body,Text,Content, List, ListItem, Left, Right, Button,StatusBar} from 'native-base';
 import { View,TouchableHighlight,Image,TouchableOpacity, StyleSheet } from 'react-native';
 // import { createStackNavigator, createAppContainer } from 'react-navigation';
 import ListDoa from '../../data/ListDoa.json';
@@ -8,7 +8,7 @@ export default class DoaScreen extends React.Component {
   static navigationOptions = {
     headerTitle: 'Daftar Doa',
     headerStyle: {
-      backgroundColor: '#00dfbe'
+      backgroundColor: '#f47e38'
     },
     headerTitleStyle: {
         fontFamily: 'SourceSansPro',
@@ -61,7 +61,7 @@ export default class DoaScreen extends React.Component {
     listconten: {
       fontSize:11,
       letterSpacing: 1,
-      color:'#666'
+      color:'#f47e38'
     },
     listjudul: {
       fontFamily: 'SourceSansPro',

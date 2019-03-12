@@ -10,11 +10,8 @@ import Tab2 from './KubroPagiScreen';
 export default class PagiScreen extends React.Component {
   constructor(props) {
     super(props);
-    // this.customTitles = [{title: 27}, {title: 28}, {title: 29}, {title: 30}, {title: 31}, {title: 32}, {title: 33}, {title: 34}];
     this.state = {
       status:true,
-      // titles:this.customTitles,
-      // font: 30,
     };
   }
  
@@ -45,19 +42,12 @@ export default class PagiScreen extends React.Component {
      this.hideMenu();
   }
 
-  // changeFontSize(font) {
-  //   this.setState({
-  //     font:font
-  //   })
-  // }
-
-
   render() {
     const { navigation } = this.props;
 
     return (
       <View style={{ flex: 1,backgroundColor:'#ecf2f5' }}>
-          <Header style={{backgroundColor:'#00dfbe'}}>
+          <Header style={{backgroundColor:'#f47e38'}} androidStatusBarColor='#e25b19'>
           <Left>
             <TouchableOpacity>
               <Icon onPress={() => navigation.goBack(null)} style={{color:'#fff'}} name='arrow-back'/>
@@ -89,10 +79,22 @@ export default class PagiScreen extends React.Component {
           </Right>
         </Header>
          <Tabs>
-          <Tab heading={ <TabHeading style={{backgroundColor:'#ecf2f5'}}><Text style={styles.textTab}>Praktis</Text></TabHeading>}>
+          <Tab 
+            heading="Sugro"
+            tabStyle={{backgroundColor:'#f47e38'}}
+            textStyle={{color: '#fff',fontSize:20,}} 
+            activeTabStyle={{backgroundColor: '#ecf2f5'}} 
+            activeTextStyle={{color: '#666', fontWeight: 'normal', fontFamily: 'SourceSansPro',fontWeight:'bold',fontSize:20,}}
+          >
             <Tab1 status={this.state.status}/>
           </Tab>
-          <Tab heading={ <TabHeading style={{backgroundColor:'#ecf2f5'}}><Text style={styles.textTab}>Lengkap</Text></TabHeading>}>
+          <Tab 
+            heading="Kubro"
+            tabStyle={{backgroundColor:'#f47e38'}}
+            textStyle={{color: '#fff',fontSize:20,}} 
+            activeTabStyle={{backgroundColor: '#ecf2f5'}} 
+            activeTextStyle={{color: '#666', fontWeight: 'normal', fontFamily: 'SourceSansPro',fontWeight:'bold',fontSize:20,}}
+          >
             <Tab2 status={this.state.status}/>
           </Tab>
         </Tabs>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { StyleSheet, Dimensions, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Dimensions, ScrollView, Image, TouchableOpacity,StatusBar } from 'react-native';
 import { View, Text } from "native-base";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
@@ -17,7 +17,7 @@ class About extends Component {
         letterSpacing: 2,
       },
       headerStyle: {
-        backgroundColor: '#00dfbe'
+        backgroundColor: '#f47e38'
       },
       headerTintColor: '#FFFFFF',
   };
@@ -25,15 +25,64 @@ class About extends Component {
   render() {
     return (
       <View style={{flex:1, backgroundColor:'#ecf2f5'}}>
+      <StatusBar backgroundColor='#f47e38' barStyle='light-content' />
         <ScrollView>
           <View style={styles.wrapper}>
             <Image
               style={styles.logo}
-              source={require('../images/iconabout.png')}
+              source={require('../images/iconandroid.png')}
             />
             <Text style={[styles.mainTitle, styles.text]}>Dzikir Pagi & Petang</Text>
-            <Text style={[styles.subTitle, styles.text]}>by Pondok Informatika Al-Madinah</Text>
+            <Text style={[styles.subTitle, styles.text]}>by Pondok Qur'an HomeStay</Text>
+            <Text style={[styles.paragraph, styles.text]}>
+              Pemuda adalah asset berharga bagi setiap bangsa. Di Qur’an Homestay para pelajar dari kalangan Dhuafa khususnya dibina menjadi bibit-bibit unggul yang memiliki bekal alqur’an, bekal kehidupan (life skill) dan berprestasi. Kehidupan layaknya pondok dengan bingkai keseharian penuh disiplin menjadi tempat yang nyaman untuk mereka bersama dengan alqur’an, mengukir prestasi, berkonstribusi untuk masyarakat, agama dan negara.
+            </Text>
+            <View style={styles.contact}>
+              <Text style={[styles.contactHeader, styles.text]}>Tujuan</Text>
+              <View style={styles.contactItem}>
+                <Icon name="navigate-next" style={styles.contactIcon}/>
+                <Text style={[styles.contactText, styles.text]}>Membentuk santri yang memiliki bacaan qur’an yang baik dan hafal minimal 5 juz per tahun</Text>
+                <Icon name="navigate-next" style={styles.contactIcon}/>
+                <Text style={[styles.contactText, styles.text]}>Membentuk santri yang memiliki sikap (attitude) yang baik dalam keseharian</Text>
+                <Icon name="navigate-next" style={styles.contactIcon}/>
+                <Text style={[styles.contactText, styles.text]}>Menyiapkan santri yang terbekali oleh keterampilan hidup yang mendasar</Text>
+                <Icon name="navigate-next" style={styles.contactIcon}/>
+                <Text style={[styles.contactText, styles.text]}>Memberikan dasar pendidikan formal kepada santri</Text>
+              </View>
+            </View>
+            <View style={styles.contact}>
+              <Text style={[styles.contactHeader, styles.text]}>Sasaran</Text>
+              <View style={styles.contactItem}>
+                <Icon name="navigate-next" style={styles.contactIcon}/>
+                <Text style={[styles.contactText, styles.text]}>Santri Mukim dari Kalangan Dhuafa</Text>
+                <Icon name="navigate-next" style={styles.contactIcon}/>
+                <Text style={[styles.contactText, styles.text]}>Santri Kalong dari lingkungan sekitar</Text>
+              </View>
+            </View>
+            <View style={styles.contact}>
+              <Text style={[styles.contactHeader, styles.text]}>Jenis Kegiatan</Text>
+              <View style={styles.contactItem}>
+                <Icon name="navigate-next" style={styles.contactIcon}/>
+                <Text style={[styles.contactText, styles.text]}>Tahsinul Qur’an, Tahfidzul Qur’an, Daily Activity Control, Pelatihan, Sekolah Formal.</Text>
+              </View>
+            </View>
+            <View style={styles.contact}>
+              <Text style={[styles.contactHeader, styles.text]}>Perangkat</Text>
+              <View style={styles.contactItem}>
+                <Text style={[styles.contactText, styles.text]}>Rumah standar losmen, Tenaga terlatih.</Text>
+              </View>
+            </View>
 
+            <Text style={[styles.paragraph, styles.text]}>
+              Aplikasi ini di buat oleh alumni santri Pondok Qur'an HomeStay Klaten
+            </Text>
+            <View style={styles.contact}>
+              <Text style={[styles.contactHeader, styles.text]}>Leader</Text>
+              <View style={styles.contactItem}>
+                <Icon name="navigate-next" style={styles.contactIcon}/>
+                <Text style={[styles.contactText, styles.text]}>Ust Maryanto</Text>
+              </View>
+            </View>
             <View style={styles.contact}>
               <Text style={[styles.contactHeader, styles.text]}>Developers</Text>
               <View style={styles.contactItem}>
@@ -42,29 +91,33 @@ class About extends Component {
               </View>
             </View>
             <View style={styles.contact}>
-              <Text style={[styles.contactHeader, styles.text]}>Pondok Informatika Al-Madinah</Text>
+              <Text style={[styles.contactHeader, styles.text]}>Pondok Qur'an HomeStay</Text>
               <View style={styles.contactItem}>
                 <Icon name="mail-outline" style={styles.contactIcon}/>
-                <Text style={[styles.contactText, styles.text]}>pondokitalmadinah@gmail.com</Text>
+                <Text style={[styles.contactText, styles.text]}>pondokquranhomestay@gmail.com</Text>
               </View>
               <View style={styles.contactItem}>
                 <Icon name="public" style={styles.contactIcon}/>
-                <Text style={[styles.contactText, styles.text]}>http://pondokinformatika.com</Text>
+                <Text style={[styles.contactText, styles.text]}>http://quranhomestay.com/</Text>
               </View>
               <View style={styles.contactItem}>
                 <Icon name="phone-iphone" style={styles.contactIcon}/>
-                <Text style={[styles.contactText, styles.text]}>0857 2524 9265 / 0822 5718 2656 (Irhamullah)</Text>
+                <Text style={[styles.contactText, styles.text]}>081548418278 (Ustadz Maryanto)</Text>
+              </View>
+              <View style={styles.contactItem}>
+                <Icon name="phone-iphone" style={styles.contactIcon}/>
+                <Text style={[styles.contactText, styles.text]}>085743744345 (Ustadzah Fahmi)</Text>
               </View>
               <View style={styles.contactItem}>
                 <Icon name="home" style={styles.contactIcon}/>
-                <Text style={[styles.contactText, styles.text]}>Jl. Raya Krapyak RT.05, Karanganyar, Wedomartani, Ngemplak, Sleman, Daerah Istimewa Yogyakarta</Text>
+                <Text style={[styles.contactText, styles.text]}>Bareng Kidul, Bareng, Klaten Tengah, Kabupaten Klaten, Jawa Tengah 57414</Text>
               </View>
             </View>
             <View style={styles.vendorWrapper}>
               <View style={styles.vendor}>
                 <Image
-                  style={[styles.vendorImage, {height: 25}]}
-                  source={require('../images/pondok.png')}
+                  style={[styles.vendorImage, {height: 37}]}
+                  source={require('../images/footerabout.png')}
                 />
                 
               </View>
@@ -84,6 +137,11 @@ const styles = StyleSheet.create({
     paddingVertical: 40,
     paddingHorizontal: 15,
     margin: 20,
+  },
+  paragraph: {
+    fontSize: 15,
+    fontStyle: 'italic',
+    marginBottom: 10,
   },
   logo: {
     width: 130,
@@ -143,7 +201,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   vendorImage: {
-    width: 120,
+    width: 300,
     alignSelf: 'center',
   },
 });

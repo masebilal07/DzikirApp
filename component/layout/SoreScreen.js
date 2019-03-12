@@ -50,16 +50,7 @@ export default class SoreScreen extends React.Component {
 
     return (
       <View style={{ flex: 1,backgroundColor:'#ecf2f5' }}>
-      <ActionSheet
-          ref="picker"
-          titles={this.state.titles}
-          separateHeight={3}
-          separateColor="#dddddd"
-          backgroundColor="rgba(0, 0, 0, 0.3)"
-          containerStyle={{margin: 10, borderRadius: 5}}
-          onClose={(obj) => {console.log('action sheet closed! clicked:' + JSON.stringify(obj));}}
-      />
-          <Header style={{backgroundColor:'#00dfbe'}}>
+          <Header style={{backgroundColor:'#f47e38'}} androidStatusBarColor='#e25b19'>
           <Left>
             <TouchableOpacity>
               <Icon onPress={() => navigation.goBack(null)} style={{color:'#fff'}} name='arrow-back'/>
@@ -86,19 +77,27 @@ export default class SoreScreen extends React.Component {
               <MenuItem
                 onPress={() => this._hideText()}
               >Show Text</MenuItem>
-              <MenuItem 
-                onPress={() => {this.setState({titles: this.customTitles}, () => {this.refs.picker.show();})
-                this.hideMenu();}}
-              >Font Size</MenuItem>
             </Menu>
             </Button>
           </Right>
         </Header>
          <Tabs>
-          <Tab heading={ <TabHeading style={{backgroundColor:'#ecf2f5'}}><Text style={styles.textTab}>Praktis</Text></TabHeading>}>
-            <Tab1 status={this.state.status} />
+          <Tab 
+            heading="Sugro"
+            tabStyle={{backgroundColor:'#f47e38'}}
+            textStyle={{color: '#fff',fontSize:20,}} 
+            activeTabStyle={{backgroundColor: '#ecf2f5'}} 
+            activeTextStyle={{color: '#666', fontWeight: 'normal', fontFamily: 'SourceSansPro',fontWeight:'bold',fontSize:20,}}
+          >
+            <Tab1 status={this.state.status}/>
           </Tab>
-          <Tab heading={ <TabHeading style={{backgroundColor:'#ecf2f5'}}><Text style={styles.textTab}>Lengkap</Text></TabHeading>}>
+          <Tab 
+            heading="Kubro"
+            tabStyle={{backgroundColor:'#f47e38'}}
+            textStyle={{color: '#fff',fontSize:20,}} 
+            activeTabStyle={{backgroundColor: '#ecf2f5'}} 
+            activeTextStyle={{color: '#666', fontWeight: 'normal', fontFamily: 'SourceSansPro',fontWeight:'bold',fontSize:20,}}
+          >
             <Tab2 status={this.state.status}/>
           </Tab>
         </Tabs>
